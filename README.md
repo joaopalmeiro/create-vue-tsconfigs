@@ -4,12 +4,12 @@ TSConfig files for projects created with [create-vue](https://github.com/vuejs/c
 
 ## Available TSConfig files
 
-### [create-vue@3.9.2](https://github.com/vuejs/create-vue/tree/v3.9.2) and [create-vue-templates](https://github.com/vuejs/create-vue-templates/tree/v3.9.2)
+### [create-vue@3.9.2](https://github.com/vuejs/create-vue/tree/v3.9.2) and [create-vue-templates@3.9.2](https://github.com/vuejs/create-vue-templates/tree/v3.9.2)
 
-| Template                                                                           | TSConfig file                                       |
-| ---------------------------------------------------------------------------------- | --------------------------------------------------- |
-| [typescript](https://github.com/vuejs/create-vue-templates/tree/v3.9.2/typescript) | [tsconfig.app.json](typescript/tsconfig.app.json)   |
-| [typescript](https://github.com/vuejs/create-vue-templates/tree/v3.9.2/typescript) | [tsconfig.node.json](typescript/tsconfig.node.json) |
+| Template                                                                           | Package TSConfig file                               | Source TSConfig file                                                                                          |
+| ---------------------------------------------------------------------------------- | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| [typescript](https://github.com/vuejs/create-vue-templates/tree/v3.9.2/typescript) | [tsconfig.app.json](typescript/tsconfig.app.json)   | [tsconfig.app.json](https://github.com/vuejs/create-vue-templates/blob/v3.9.2/typescript/tsconfig.app.json)   |
+| [typescript](https://github.com/vuejs/create-vue-templates/tree/v3.9.2/typescript) | [tsconfig.node.json](typescript/tsconfig.node.json) | [tsconfig.node.json](https://github.com/vuejs/create-vue-templates/blob/v3.9.2/typescript/tsconfig.node.json) |
 
 ## Development
 
@@ -28,21 +28,36 @@ npm create vue@3.9.2 test-create-vue
 ```
 
 ```bash
-cd test-create-vue && npx vue-tsc --project tsconfig.app.json --showConfig
+cd test-create-vue && npm install
 ```
 
 ```bash
-npx vue-tsc --project tsconfig.node.json --showConfig && cd ..
+npx vue-tsc --project tsconfig.app.json --showConfig
 ```
 
-Delete the following [top-level options](https://www.typescriptlang.org/tsconfig#extends):
+```bash
+npx vue-tsc --project tsconfig.node.json --showConfig
+```
+
+```bash
+cd ..
+```
+
+Delete the following [top-level options](https://www.typescriptlang.org/tsconfig#extends) (if necessary):
 
 - `"references"`
 - `"files"`
 - `"include"`
 - `"exclude"`
 
-Add the following [`compilerOptions` option](https://www.typescriptlang.org/docs/handbook/project-references.html#composite):
+Remove the following [`compilerOptions` options](https://www.typescriptlang.org/tsconfig) (if necessary):
+
+- `"types"`
+- `"tsBuildInfoFile"`
+- `"baseUrl"`
+- `"paths"`
+
+Add the following [`compilerOptions` option](https://www.typescriptlang.org/docs/handbook/project-references.html#composite) (if necessary):
 
 - `"composite": true`
 
