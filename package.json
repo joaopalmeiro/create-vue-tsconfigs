@@ -1,6 +1,6 @@
 {
   "name": "create-vue-tsconfigs",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "TSConfig files for projects created with create-vue.",
   "license": "MIT",
   "author": "João Palmeiro",
