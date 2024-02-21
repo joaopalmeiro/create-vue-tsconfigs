@@ -2,6 +2,10 @@
 
 TSConfig files for projects created with [create-vue](https://github.com/vuejs/create-vue).
 
+- [Source code](https://github.com/joaopalmeiro/create-vue-tsconfigs)
+- [npm package](https://www.npmjs.com/package/create-vue-tsconfigs)
+- [Licenses](https://licenses.dev/npm/create-vue-tsconfigs/0.1.0)
+
 ## Available TSConfig files
 
 ### [create-vue@3.9.2](https://github.com/vuejs/create-vue/tree/v3.9.2) and [create-vue-templates@3.9.2](https://github.com/vuejs/create-vue-templates/tree/v3.9.2)
@@ -64,3 +68,36 @@ Add the following [`compilerOptions` option](https://www.typescriptlang.org/docs
 ```bash
 npm run format
 ```
+
+## Deployment
+
+```bash
+npm pack --dry-run
+```
+
+```bash
+npm version patch
+```
+
+```bash
+npm version minor
+```
+
+```bash
+npm version major
+```
+
+- Update the version in the `Licenses` link at the top.
+- Commit and push changes.
+- Create a tag on [GitHub Desktop](https://github.blog/2020-05-12-create-and-push-tags-in-the-latest-github-desktop-2-5-release/).
+- Check [GitHub](https://github.com/joaopalmeiro/create-vue-tsconfigs/tags).
+
+```bash
+npm login
+```
+
+```bash
+npm publish
+```
+
+- Check [npm](https://www.npmjs.com/package/create-vue-tsconfigs).
